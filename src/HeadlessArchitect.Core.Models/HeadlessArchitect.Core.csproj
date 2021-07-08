@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Deliverystack.Core">
+      <HintPath>..\..\Deliverystack\Deliverystack.Core\bin\Debug\net5.0\Deliverystack.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Deliverystack.Html, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Deliverystack\Deliverystack.Html\bin\Debug\net5.0\Deliverystack.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="Deliverystack.Markdown, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Deliverystack\Deliverystack.Markdown\bin\Debug\net5.0\Deliverystack.Markdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Deliverystack.RazorPages">
+      <HintPath>..\..\Deliverystack\Deliverystack.RazorPages\obj\Debug\net5.0\Deliverystack.RazorPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Deliverystack.StackContent">
+      <HintPath>..\..\Deliverystack\Deliverystack.StackContent\obj\Debug\net5.0\Deliverystack.StackContent.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
