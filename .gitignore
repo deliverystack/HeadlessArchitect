@@ -1,0 +1,8 @@
+bin/
+obj/
+*.dll
+*.user
+*nuget*
+wwwroot/
+.editorconfig
+.vs/Deliverystack/v17/.suo
