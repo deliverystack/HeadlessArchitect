@@ -1,0 +1,8 @@
+﻿@model HeadlessArchitect.Website.Pages.Shared.Components.Breadcrumb.FavIcon.FavIconModel
+
+@{
+    if (!string.IsNullOrEmpty(Model.Path))
+    {
+        <link rel="icon" href="@Model.Path" type="image/x-icon">
+    }
+}

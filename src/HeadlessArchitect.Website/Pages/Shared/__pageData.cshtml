@@ -1,0 +1,17 @@
+﻿@model Deliverystack.StackContent.Models.Groups.PageData
+
+<title>@Model.PageTitle</title>
+<meta name="description" content="@Model.PageDescription" />
+<meta name="keywords" content="@Model.SearchKeywords" />
+<meta property="og:title" content="@Model.PageTitle" />
+<meta property="og:description" content="@Model.PageDescription" />
+
+@if (@Model.OpenGraphImage != null && !String.IsNullOrEmpty(@Model.OpenGraphImage.Url))
+{
+    <meta property="og:image" content="@Model.OpenGraphImage.Url"/>
+    <meta property="og:image:url" content="@Model.OpenGraphImage.Url"/>
+    <meta property="twitter:image" content="@Model.OpenGraphImage.Url"/>
+}
+
+@await Component.InvokeAsync("FavIcon")
+@await Component.InvokeAsync("GoogleAnalytics")

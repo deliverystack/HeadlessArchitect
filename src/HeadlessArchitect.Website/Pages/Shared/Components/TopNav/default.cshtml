@@ -1,0 +1,19 @@
+﻿@model TopNav.TopNavModel
+
+<a class="navbar-brand" href="@Model.Home.Url">@Model.Home.NavTitle</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+    <ul class="navbar-nav flex-grow-1">
+        @{
+            foreach (var child in Model.Children)
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="@child.Url">@child.NavTitle</a>
+                </li>
+            }
+        }
+    </ul>
+</div>

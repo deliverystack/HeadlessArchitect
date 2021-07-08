@@ -1,0 +1,26 @@
+﻿@using HeadlessArchitect.Core.Models.ContentTypes
+@using Deliverystack.Markdown
+@model Deliverystack.RazorPages.Models.PageModelBase;
+ 
+<div style="border: 1px solid black; background: pink; padding: 10px 10px 10px 10px">
+  __default.cshtml
+  @{
+      if (Model.EntryModel is Page it)
+      {
+          if (it.FirstMarkup != null)
+          {
+              @: FirstHTML: @it.FirstMarkup.Value
+          }
+
+          if (it.SecondMarkup != null)
+          {
+              @: SecondHTML: @it.SecondMarkup.Value
+          }
+
+          foreach (MarkdownField field in @it.Markdown)
+          {
+              @field.Markup;
+          }
+      }
+  }
+</div>

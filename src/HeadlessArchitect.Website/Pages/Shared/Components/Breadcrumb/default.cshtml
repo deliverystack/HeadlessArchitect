@@ -1,0 +1,13 @@
+﻿@model Breadcrumb.BreadcrumbModel
+
+@{
+    foreach (var ancestor in Model.Ancestors)
+    {
+        <a href="@ancestor.Url">@ancestor.NavTitle</a> @: &gt; 
+    }
+
+    if (Model.Self != null)
+    {
+        @Model.Self.NavTitle
+    }
+}
