@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\**" />
+    <Content Remove="Models\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\PathApi.cs" />
+    <Compile Remove="Controllers\SitemapXmlController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Markdig" Version="0.24.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0-preview.3.21201.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Deliverystack.Base">
+      <HintPath>..\..\Deliverystack\Deliverystack.Base\bin\Debug\net5.0\Deliverystack.Base.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Deliverystack.Core">
+      <HintPath>..\..\Deliverystack\Deliverystack.Core\obj\Debug\net5.0\Deliverystack.Core.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Deliverystack.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Deliverystack\Deliverystack.Html\bin\Debug\net5.0\Deliverystack.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Deliverystack.DeliveryApi">
+      <HintPath>..\..\Deliverystack\Deliverystack.DeliveryApi\obj\Debug\net5.0\Deliverystack.DeliveryApi.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Deliverystack.DeliveryClient">
+      <HintPath>..\..\Deliverystack\Deliverystack.DeliveryClient\obj\Debug\net5.0\Deliverystack.DeliveryClient.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Deliverystack.Html, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Deliverystack\Deliverystack.Html\bin\Debug\net5.0\Deliverystack.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="Deliverystack.Interfaces">
+      <HintPath>..\..\Deliverystack\Deliverystack.Interfaces\bin\Debug\net5.0\Deliverystack.Interfaces.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Deliverystack.Markdown, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Deliverystack\Deliverystack.Markdown\bin\Debug\net5.0\Deliverystack.Markdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Deliverystack.Models">
+      <HintPath>..\..\Deliverystack\Deliverystack.Models\bin\Debug\net5.0\Deliverystack.Models.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Deliverystack.RazorPages">
+      <HintPath>..\..\Deliverystack\Deliverystack.RazorPages\obj\Debug\net5.0\Deliverystack.RazorPages.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Deliverystack.StackContent">
+      <HintPath>..\..\Deliverystack\Deliverystack.StackContent\obj\Debug\net5.0\Deliverystack.StackContent.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="HeadlessArchitect.Core">
+      <HintPath>..\HeadlessArchitect.Core.Models\bin\Debug\net5.0\HeadlessArchitect.Core.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+</Project>
